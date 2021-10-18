@@ -1,7 +1,30 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+puts "Creating 10 blogs..."
+
+10.times do |i|
+    Blog.create!(
+        title: "My Blog Post #{i}",
+        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed nisl ac lectus ultricies malesuada et et felis. Cras ornare eleifend condimentum. Vestibulum orci urna, placerat sed mattis non, fermentum ac urna. Curabitur tempus bibendum purus, in imperdiet nulla mollis ut. Quisque pulvinar pulvinar dictum. In hac habitasse platea dictumst. Donec eget faucibus massa. Maecenas dictum sem turpis, sit amet accumsan risus semper non. Cras commodo mollis eros, ac consequat arcu vehicula quis. Cras et vehicula turpis. Cras ornare nibh enim, nec eleifend ipsum egestas at."
+    )
+end
+
+puts "Creating 5 skills..."
+
+Skill.create!(title: "Ruby", percent_used: 50)
+Skill.create!(title: "NodeJS", percent_used: 25)
+Skill.create!(title: "Kotlin", percent_used: 10)
+Skill.create!(title: "Golang", percent_used: 10)
+Skill.create!(title: "HTML", percent_used: 5)
+
+puts "Creating 9 jobs..."
+
+9.times do |i|
+    Job.create!(
+        title: "Job title #{i}",
+        subtitle: "My great service",
+        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed nisl ac lectus ultricies malesuada et et felis. Cras ornare eleifend condimentum. Vestibulum orci urna, placerat sed mattis non, fermentum ac urna. Curabitur tempus bibendum purus, in imperdiet nulla mollis ut. Quisque pulvinar pulvinar dictum. In hac habitasse platea dictumst. Donec eget faucibus massa. Maecenas dictum sem turpis, sit amet accumsan risus semper non. Cras commodo mollis eros, ac consequat arcu vehicula quis. Cras et vehicula turpis. Cras ornare nibh enim, nec eleifend ipsum egestas at.",
+        main_image: "https://via.placeholder.com/600x400",
+        thumb_image: "https://via.placeholder.com/350x200"
+    )
+end
+
+puts "Seeds created"
