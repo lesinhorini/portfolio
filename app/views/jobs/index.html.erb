@@ -1,10 +1,17 @@
-<h1>Job Items</h1>
+<h1>Jobs</h1>
 
-<% @jobs_items.each do |job| %>
-    <article>
-        <h2><%= job.title %></h2>
-        <h4><%= job.subtitle %></h4>
-        <p><%= job.body %></p>
-        <%= image_tag job.thumb_image if job.thumb_image? %>
-    </article>
-<% end %>
+<%= link_to 'New', new_job_path %>
+
+<div>
+    <% @jobs_items.each do |job| %>
+        <article>
+            <h2><%= link_to job.title, job_path(job) %></h2>
+            <em><%= job.subtitle %></em>
+            <p><%= job.body %></p>
+            <%= image_tag job.thumb_image if job.thumb_image? %>
+            <footer>
+                <%= link_to 'Edit', edit_job_path(job) %>
+            </footer>
+        </article>
+    <% end %>
+</div>

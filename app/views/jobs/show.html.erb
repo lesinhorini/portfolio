@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<%= image_tag @job.main_image if !@job.main_image.nil? %>
+
+<h1><%= @job.title %></h1>
+<em><%= @job.subtitle %></em>
+
+<p>
+  <strong>Body:</strong>
+  <%= @job.body %>
+</p>
+
+<%= link_to 'Back', jobs_path %> |
+<%= link_to 'Edit', edit_job_path(@job) %>
