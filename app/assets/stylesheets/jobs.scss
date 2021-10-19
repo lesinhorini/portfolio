@@ -11,3 +11,16 @@ article {
     padding: 1rem;
     width: 26rem;
 }
+
+article h2 a {
+    color: #0099cc;
+    text-decoration: none;
+}
+
+article h2 a:hover {
+    text-decoration: underline;
+}
+
+article footer {
+    margin-top: 16px;
+}

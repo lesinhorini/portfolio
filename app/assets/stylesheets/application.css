@@ -38,4 +38,5 @@ input[type="submit"], button, .btn {
     outline: none;
     padding: 8px 24px;
     text-align: center;
+    text-decoration: none;
 }
