@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'contact', to:'pages#contact'
 
-  resources :blogs
+  resources :blogs do
+    member do
+      get :toogle_status
+    end
+  end
 
   resources :jobs, except: [:show]
   get 'job/:id', to: 'jobs#show', as: 'job_show'
