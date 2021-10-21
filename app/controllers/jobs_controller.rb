@@ -8,6 +8,7 @@ class JobsController < ApplicationController
     # GET /jobs/new
     def new
         @job = Job.new
+        3.times { @job.technologies.build }
     end
 
     # GET /jobs/1
@@ -59,6 +60,9 @@ class JobsController < ApplicationController
     private
         # Only allow a list of trusted parameters through.
         def job_params
-            params.require(:job).permit(:title, :subtitle, :body, :main_image, :thumb_image)
+            params.require(:job).permit(
+                :title, :subtitle, :body, :main_image, :thumb_image,
+                technologies_attributes: [:name]
+            )
         end
 end

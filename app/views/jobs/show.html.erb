@@ -10,5 +10,13 @@
   <%= @job.body %>
 </p>
 
+<h2>Technologies</h2>
+
+<ul>
+  <% @job.technologies.each do |tech|  %>
+    <li><%= tech.name %></li>
+  <% end %>
+</ul>
+
 <%= link_to 'Back', jobs_path %> |
 <%= link_to 'Edit', edit_job_path(@job) %>
