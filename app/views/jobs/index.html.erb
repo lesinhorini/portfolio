@@ -1,0 +1,18 @@
+<h1>Jobs</h1>
+
+<%= link_to 'New', new_job_path, class: "btn" %>
+
+<div>
+    <% @jobs_items.each do |job| %>
+        <article>
+            <h2><%= link_to job.title, job_show_path(job) %></h2>
+            <em><%= job.subtitle %></em>
+            <p><%= job.body %></p>
+            <%= image_tag job.thumb_image if job.thumb_image? %>
+            <footer>
+                <%= link_to 'Edit', edit_job_path(job), class: "btn" %>
+                <%= link_to 'Delete', job, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn" %>
+            </footer>
+        </article>
+    <% end %>
+</div>
