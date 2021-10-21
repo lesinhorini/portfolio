@@ -1,3 +1,5 @@
+puts "Creating 3 topics..."
+
 3.times do |i|
     Topic.create!(
         title: "Topic #{i}"
@@ -41,5 +43,14 @@ Job.create!(
     main_image: "https://via.placeholder.com/600x400",
     thumb_image: "https://via.placeholder.com/350x200"
 )
+
+puts "Creating 3 jobs..."
+
+3.times do |i|
+    Technology.create!(
+        name: "Technology #{i}",
+        job_id: Job.last.id
+    )
+end
 
 puts "Seeds created"
