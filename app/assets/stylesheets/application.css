@@ -40,3 +40,15 @@ input[type="submit"], button, .btn {
     text-align: center;
     text-decoration: none;
 }
+
+label {
+    display: block;
+}
+
+input[type="text"], select, textarea {
+    border: #ccc 1px solid;
+    border-radius: .2rem;
+    margin: 4px 0 16px 0;
+    min-width: 200px;
+    padding: 8px;
+}
