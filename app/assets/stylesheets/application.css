@@ -45,7 +45,7 @@ label {
     display: block;
 }
 
-input[type="text"], select, textarea {
+input[type="text"], input[type="email"], input[type="password"], select, textarea {
     border: #ccc 1px solid;
     border-radius: .2rem;
     margin: 4px 0 16px 0;
