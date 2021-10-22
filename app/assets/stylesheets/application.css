@@ -14,41 +14,112 @@
  *= require_self
  */
 
-*, ::after, ::before {
-    box-sizing: border-box;
+*,
+::after,
+::before {
+  box-sizing: border-box;
 }
 
 html {
-    font-family: sans-serif;
-    line-height: 1.15;
+  font-family: sans-serif;
+  line-height: 1.15;
 }
 
-input[type="submit"], button, .btn {
-    background-color: #0099CC;
-    border-color: #0099CC;
-    border-radius: .2rem;
-    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2) , 0 2px 2px 0 rgba(0,0,0,.14) , 0 1px 5px 0 rgba(0,0,0,.12);
-    color: #FFFFFF;
-    font-size: .875rem;
-    font-weight: 500;
-    letter-spacing: .08929em;
-    line-height: 1.428571;
-    margin: .3125rem 1px;
-    min-width: 72px;
-    outline: none;
-    padding: 8px 24px;
-    text-align: center;
-    text-decoration: none;
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+main {
+  padding: 1rem;
+  margin: auto;
+}
+
+form {
+  display: inline;
+}
+
+input[type="submit"],
+button,
+.btn {
+  background-color: #0099cc;
+  border-color: #0099cc;
+  border-radius: 0.2rem;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.08929em;
+  line-height: 1.428571;
+  margin: 0.3125rem 1px;
+  min-width: 72px;
+  outline: none;
+  padding: 8px 24px;
+  text-align: center;
+  text-decoration: none;
 }
 
 label {
-    display: block;
+  display: block;
 }
 
-input[type="text"], input[type="email"], input[type="password"], select, textarea {
-    border: #ccc 1px solid;
-    border-radius: .2rem;
-    margin: 4px 0 16px 0;
-    min-width: 200px;
-    padding: 8px;
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+  border: #ccc 1px solid;
+  border-radius: 0.2rem;
+  margin: 4px 0 16px 0;
+  min-width: 200px;
+  padding: 8px;
+}
+
+.main-header {
+  width: 100%;
+  height: 3.5rem;
+  background-color: #0099cc;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.main-header__nav {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-header__item-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.main-header__item {
+  margin: 0 1rem;
+  padding: 0;
+}
+
+.main-header__item a,
+.main-header__item button {
+  font: inherit;
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.main-header__item a:hover,
+.main-header__item a:active,
+.main-header__item a.active,
+.main-header__item button:hover,
+.main-header__item button:active {
+  color: #ffeb3b;
 }
