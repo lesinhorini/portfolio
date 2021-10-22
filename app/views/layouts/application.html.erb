@@ -14,19 +14,31 @@
     <header class="main-header">
       <nav class="main-header__nav">
         <ul class="main-header__item-list">
+          <li class="main-header__item">
+            <%= link_to "Home", root_path %>
+          </li>
+          <li class="main-header__item">
+            <%= link_to "Blogs", blogs_path %>
+          </li>
+          <li class="main-header__item">
+            <%= link_to "Jobs", jobs_path %>
+          </li>
         </ul>
         <ul class="main-header__item-list">
           <% if current_user %>
-          <li class="main-header__item">
-            <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-          </li>
+            <li class="main-header__item">
+              <%= link_to current_user.first_name, edit_user_registration_path %>
+            </li>
+            <li class="main-header__item">
+              <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+            </li>
           <% else %>
-          <li class="main-header__item">
-            <%= link_to "Login", new_user_session_path %>
-          </li>
-          <li class="main-header__item">
-            <%= link_to "Sign up", new_user_registration_path %>
-          </li>
+            <li class="main-header__item">
+              <%= link_to "Login", new_user_session_path %>
+            </li>
+            <li class="main-header__item">
+              <%= link_to "Sign up", new_user_registration_path %>
+            </li>
           <% end %>
         </ul>
       </nav>
