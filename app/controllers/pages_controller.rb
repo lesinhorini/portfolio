@@ -4,7 +4,6 @@ class PagesController < ApplicationController
     @skills = Skill.all
   end
 
-  
   def about
   end
 
